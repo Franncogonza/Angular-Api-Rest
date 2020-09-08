@@ -1,5 +1,6 @@
 import { ReqresService } from "../../services/reqres.service";
 import { Component, OnInit } from "@angular/core";
+import { Router } from '@angular/router';
 
 @Component({
   selector: "app-home",
@@ -8,7 +9,10 @@ import { Component, OnInit } from "@angular/core";
 })
 export class HomeComponent implements OnInit {
   users: any[] = [];
-  constructor(private reqresService: ReqresService) {}
+
+  constructor(
+    private reqresService: ReqresService,
+    private router:Router) {}
 
   ngOnInit(): void {
     this.setView();
@@ -31,7 +35,5 @@ export class HomeComponent implements OnInit {
   }
 
   userDetails(id: number) {
-    console.log("Id usuario: ", id);
-  }
-
+    this.router.navigate( ['user', id] );  }
 }
