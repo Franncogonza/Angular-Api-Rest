@@ -1,1 +1,36 @@
-<p>user-detail works!</p>
+<div class="container" style="margin-top: 40px">
+  <div class="card" style="width: 100%">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-4" style="text-align: center">
+          <img
+           *ngIf="user.avatar"
+            [src]="user.avatar"
+            class="card-img-top img-thumb img-user"
+            alt="user.first_name"
+          />
+          <div class="card-body"></div>
+          <h5 class="card-title">{{ user.first_name }}</h5>
+        </div>
+        <div class="col-8">
+          <p class="card-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            nulla ligula, elementum ut dui quis, commodo gravida eros. Mauris
+            scelerisque sit amet dolor eget congue. Vivamus venenatis, risus id
+            rutrum egestas, nibh nibh consectetur est, quis euismod purus ex at
+            ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Suspendisse nulla ligula, elementum ut dui quis, commodo gravida
+            eros. Mauris scelerisque sit amet dolor eget congue. Vivamus
+            venenatis, risus id rutrum egestas, nibh nibh consectetur est, quis
+            euismod purus ex at ex. Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Suspendisse nulla ligula, elementum ut dui quis,
+            commodo gravida eros. Mauris scelerisque sit amet dolor eget congue.
+            Vivamus venenatis, risus id rutrum egestas, nibh nibh consectetur
+            est, quis euismod purus ex at ex.
+          </p>
+          <a [routerLink]="['/home']" class="btn btn-primary">User List</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

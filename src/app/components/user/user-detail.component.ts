@@ -24,4 +24,3 @@ export class UserDetailComponent implements OnInit {
   ngOnInit(): void {}
 }
 
-// p104 08/09 19 05
